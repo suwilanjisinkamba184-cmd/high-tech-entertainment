@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b12">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Founder Studio · High Tech Entertainment</title>
+  <link rel="stylesheet" href="../assets/site.css?v=20261101-2">
+  <link rel="stylesheet" href="../assets/admin.css?v=20261102-gold1"><link rel="stylesheet" href="../assets/premium-refresh.css?v=1">\n  <link rel="stylesheet" href="../assets/admin-enhancements.css?v=1">
+</head>
+<body class="admin-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar admin-topbar">
+  <div class="admin-topbar-inner">
+    <a class="brand" href="../" aria-label="High Tech Entertainment public website">
+      <span class="brand-mark">HT</span>
+      <span>HIGH TECH <small>ENTERTAINMENT · FOUNDER STUDIO</small></span>
+    </a>
+    <div class="admin-top-actions">
+      <span class="admin-live"><i></i> PRIVATE WORKSPACE</span>
+      <a class="btn ghost" href="../">View website ↗</a>
+      <a class="btn ghost" href="../account/">Account</a>
+      <button class="btn" data-logout data-signed-in hidden>Sign out</button>
+    </div>
+  </div>
+</header>
+
+<section id="admin-login" class="admin-login-wrap">
+  <div class="admin-login-visual">
+    <div class="admin-login-orbit"></div>
+    <div class="admin-login-copy">
+      <div class="eyebrow">HIGH TECH ENTERTAINMENT · CONTROL ROOM</div>
+      <h1>Build the<br><span>sound of tomorrow.</span></h1>
+      <p>Your private workspace for music, artists, releases and enquiries.</p>
+      <div class="admin-login-tags"><span>CATALOGUE</span><span>ARTISTS</span><span>STUDIO</span></div>
+    </div>
+  </div>
+  <div class="panel admin-login-card">
+    <div class="eyebrow">Founder authentication</div>
+    <h2>Welcome back.</h2>
+    <p class="muted">Sign in with the authorised founder account to access your studio.</p>
+    <form id="login-form">
+      <div class="field"><label for="login-email">Email address</label><input id="login-email" name="email" type="email" required autocomplete="username" placeholder="Founder email"></div>
+      <div class="field"><label for="login-password">Password</label><input id="login-password" name="password" type="password" required autocomplete="current-password" placeholder="Your password"></div>
+      <div class="admin-login-actions"><button class="btn gold" type="submit">Enter Founder Studio →</button><button class="btn" type="button" id="google-login">Continue with Google</button></div>
+      <div class="status" id="login-status" role="status" aria-live="polite"></div>
+    </form>
+    <div class="admin-secure-note">🔒 Protected by Supabase authentication and founder-only database policies.</div>
+  </div>
+</section>
+
+<div id="admin-app" class="admin-workspace" hidden>
+  <aside class="admin-sidebar" aria-label="Founder studio navigation">
+    <div class="admin-side-heading">WORKSPACE</div>
+    <button class="admin-nav-item active" data-tab="overview"><span class="admin-nav-icon">⌂</span><span>Overview</span><b>01</b></button>
+    <button class="admin-nav-item" data-tab="videos"><span class="admin-nav-icon">▶</span><span>Video manager</span><b>03</b></button>
+    <button class="admin-nav-item" data-tab="tracks"><span class="admin-nav-icon">♫</span><span>Music manager</span><b>02</b></button>
+    <button class="admin-nav-item" data-tab="artists"><span class="admin-nav-icon">♙</span><span>Artists</span><b>03</b></button>
+    <button class="admin-nav-item" data-tab="releases"><span class="admin-nav-icon">▣</span><span>Releases</span><b>04</b></button>
+    <button class="admin-nav-item" data-tab="inbox"><span class="admin-nav-icon">✉</span><span>Inbox</span><b>05</b></button>
+    <div class="admin-side-heading admin-side-gap">SYSTEM</div>
+    <button class="admin-nav-item hte-ai-nav" data-tab="ads"><span class="admin-nav-icon">🎙</span><span>AI Ad Studio</span><b>07</b></button>
+    <button class="admin-nav-item" data-tab="settings"><span class="admin-nav-icon">⚙</span><span>Settings</span><b>06</b></button>
+    <a class="admin-nav-item" href="../account/"><span class="admin-nav-icon">◉</span><span>Profile & account</span><b>↗</b></a>
+    <a class="admin-nav-item" href="../"><span class="admin-nav-icon">↗</span><span>Public website</span><b>↗</b></a>
+    <div class="admin-sidebar-bottom"><div class="admin-status-orb"></div><div><strong>STUDIO SECURE</strong><small>Founder access only</small></div></div>
+  </aside>
+
+  <main id="main" class="admin-main">
+    <div class="admin-main-top">
+      <div><div class="eyebrow">HIGH TECH ENTERTAINMENT / CONTROL ROOM</div><h1 id="view-title">Overview</h1><p id="admin-date" class="admin-date">Your creative operations, in one place.</p></div>
+      <div class="admin-main-actions"><span class="admin-user-chip"><span class="admin-user-avatar">HT</span><span><strong data-user-name>Founder</strong><small>Founder account</small></span></span><button class="btn" id="refresh-admin" type="button">↻ Refresh data</button></div>
+    </div>
+    <div class="status admin-global-status" id="admin-status" role="status" aria-live="polite"></div>
+
+    <section class="admin-view" data-view="overview">
+      <div class="admin-welcome-banner">
+        <div><div class="eyebrow">YOUR CREATIVE COMMAND CENTRE</div><h2>Make moves. Make music.</h2><p>Manage your catalogue, showcase your talent and stay on top of every enquiry.</p><button class="btn gold" data-tab="tracks" type="button">Upload new music <span>↗</span></button></div>
+        <div class="admin-banner-art"><div class="admin-banner-ring"></div><strong>HT<span>E</span></strong><small>MUSIC · PRODUCTION · BEYOND</small></div>
+      </div>
+      <button class="hte-ai-feature" type="button" data-tab="ads">
+        <span class="hte-ai-feature-icon">✦</span>
+        <span class="hte-ai-feature-copy"><small>NEW · AI-POWERED AUDIO PRODUCTION</small><strong>ElevenLabs AI Ad Studio</strong><span>Create professional voice adverts, preview MP3 drafts and publish approved campaigns directly to your music experience.</span></span>
+        <span class="hte-ai-feature-action">Open AI Studio <b>→</b></span>
+      </button>
+      <div class="admin-section-label"><div><span>01 / OVERVIEW</span><h2>Studio statistics</h2></div><p>Live totals from your Supabase catalogue</p></div>
+      <div class="admin-stat-grid">
+        <article class="admin-stat-card"><div class="admin-stat-top"><span class="admin-stat-icon">♫</span><span>CATALOGUE</span></div><div class="value" id="stat-tracks">—</div><div class="label">Music tracks</div><div class="admin-stat-foot">Manage audio and publishing</div></article>
+        <article class="admin-stat-card"><div class="admin-stat-top"><span class="admin-stat-icon">♙</span><span>ROSTER</span></div><div class="value" id="stat-artists">—</div><div class="label">Artist profiles</div><div class="admin-stat-foot">Build your artist directory</div></article>
+        <article class="admin-stat-card"><div class="admin-stat-top"><span class="admin-stat-icon">▣</span><span>DISCOGRAPHY</span></div><div class="value" id="stat-releases">—</div><div class="label">Official releases</div><div class="admin-stat-foot">Singles, EPs and albums</div></article>
+      </div>
+      <div class="admin-section-label"><div><span>02 / QUICK ACCESS</span><h2>What would you like to do?</h2></div></div>
+      <div class="admin-quick-grid">
+        <button class="admin-quick-card" data-tab="tracks" type="button"><span>♫</span><strong>Upload music</strong><small>Add a track to your catalogue</small><b>Open manager →</b></button>
+        <button class="admin-quick-card" data-tab="artists" type="button"><span>♙</span><strong>Add an artist</strong><small>Grow your creative roster</small><b>Manage artists →</b></button>
+        <button class="admin-quick-card" data-tab="releases" type="button"><span>▣</span><strong>Publish a release</strong><small>Showcase a new project</small><b>Manage releases →</b></button>
+        <button class="admin-quick-card" data-tab="inbox" type="button"><span>✉</span><strong>Check enquiries</strong><small>Review booking and contact messages</small><b>Open inbox →</b></button>
+      </div>
+      <div class="admin-bottom-note"><span class="admin-note-icon">✓</span><div><strong>Your studio is protected</strong><p>Founder access is restricted by the authorised Supabase account and database Row Level Security policies. Keep your password and private keys confidential.</p></div></div>
+    </section>
+
+    <section class="admin-view" data-view="videos" hidden>
+      <div class="admin-section-label"><div><span>03 / VIDEO LIBRARY</span><h2>Video manager</h2><p>Upload and publish official music videos and visual content.</p></div></div>
+      <div class="panel admin-form-panel admin-compact-form"><div class="admin-panel-heading"><span class="admin-panel-icon">▶</span><div><h3>Upload a video</h3><p>MP4, WebM or MOV · maximum 100 MB</p></div></div>
+        <form id="video-form"><div class="form-grid">
+          <div class="field"><label>Video title</label><input name="title" required maxlength="160" placeholder="Enter video title"></div>
+          <div class="field"><label>Artist / creator</label><input name="artist" maxlength="180" placeholder="Artist or creator"></div>
+          <div class="field full"><label>Description <span class="optional">OPTIONAL</span></label><textarea name="description" maxlength="3000" placeholder="About this video…"></textarea></div>
+          <div class="field full"><label>Thumbnail image URL <span class="optional">OPTIONAL</span></label><input name="thumbnail_url" type="url" placeholder="https://…"></div>
+          <div class="field full"><label>Video file</label><input name="video" type="file" accept="video/mp4,video/webm,video/quicktime,.mp4,.webm,.mov,.m4v" required><small class="admin-field-help">Videos are stored in Supabase Storage and their details are saved in the videos database table.</small></div>
+          <div class="field full admin-checkbox-field"><label><input name="is_published" type="checkbox" checked style="width:auto"> Publish on the main website immediately</label></div>
+        </div><button class="btn gold admin-submit" type="submit">Upload video ↑</button><div class="status" id="video-status" role="status" aria-live="polite"></div></form>
+      </div>
+      <div class="admin-table-heading"><div><span>YOUR VIDEO LIBRARY</span><h3>Stored videos</h3></div><button class="btn" type="button" id="refresh-videos">↻ Refresh</button></div>
+      <div class="table-wrap admin-table-wrap"><table class="data-table"><thead><tr><th>Video</th><th>Artist</th><th>Status</th><th>Actions</th></tr></thead><tbody id="admin-videos"><tr><td colspan="4">Loading videos…</td></tr></tbody></table></div>
+    </section>
+    <section class="admin-view" data-view="tracks" hidden>
+      <div class="admin-section-label"><div><span>02 / AUDIO LIBRARY</span><h2>Music manager</h2><p>Upload, publish or remove tracks from your public catalogue.</p></div></div>
+      <div class="admin-content-grid">
+        <div class="panel admin-form-panel"><div class="admin-panel-heading"><span class="admin-panel-icon">♫</span><div><h3>Add a music track</h3><p>Audio files up to 100 MB</p></div></div>
+          <form id="track-form">
+            <div class="form-grid">
+              <div class="field"><label>Track title</label><input name="title" required maxlength="140" placeholder="Enter track title"></div>
+              <div class="field"><label>Artist</label><input name="artist" required maxlength="180" placeholder="Artist name"></div>
+              <div class="field"><label>Associate with release <span class="optional">OPTIONAL</span></label><select name="release_id"><option value="">Choose a release</option></select><small class="admin-field-help">The app lists tracks marked as published. Associate this track with a release if it belongs to a specific project.</small></div>
+              <div class="field"><label>Uploader / producer</label><input name="uploader" value="High Tech Entertainment" maxlength="80"></div>
+              <div class="field"><label>Genre</label><input name="genre" maxlength="80" placeholder="Afrobeats, Dancehall, Drill"></div>
+              <div class="field full"><label>Cover artwork URL <span class="optional">OPTIONAL</span></label><input name="cover_url" type="url" placeholder="https://…"></div>
+              <div class="field full"><label>Spotify track URL <span class="optional">OPTIONAL</span></label><input name="spotify_url" type="url" placeholder="https://open.spotify.com/track/…"><small class="admin-field-help">Paste a Spotify track link to stream it from the website and Android app.</small></div><div class="field full"><label>Audio file <span class="optional">OPTIONAL</span></label><input name="audio" type="file" accept="audio/*,.mp3,.m4a,.aac,.wav,.ogg,.webm,.flac"><small class="admin-field-help">Upload MP3, M4A, AAC, WAV, OGG, FLAC or WebM (maximum 100 MB). Provide either a Spotify URL or an audio file.</small></div>
+              <div class="field full admin-checkbox-field"><label><input name="is_published" type="checkbox" checked style="width:auto"> Publish immediately on the public website</label></div>
+            </div>
+            <button class="btn gold admin-submit" type="submit">Upload track <span>↑</span></button><div class="status" id="track-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="admin-side-info"><div class="admin-info-card"><span class="admin-info-icon">01</span><h3>Upload safely</h3><p>Files are stored in your private-managed HTE audio bucket. Only the authorised founder can upload.</p></div><div class="admin-info-card"><span class="admin-info-icon">02</span><h3>Publish with control</h3><p>Uncheck “Publish immediately” to save a track as a draft before making it public.</p></div><div class="admin-info-card"><span class="admin-info-icon">03</span><h3>Public catalogue</h3><p>Published tracks appear in the Music section of your main website after refresh.</p></div></div>
+      </div>
+      <div class="admin-table-heading"><div><span>YOUR LIBRARY</span><h3>Uploaded tracks</h3></div><input class="admin-table-search" type="search" data-table-search="admin-tracks" placeholder="Search tracks…" aria-label="Search tracks"></div>
+      <div class="table-wrap admin-table-wrap"><table class="data-table"><thead><tr><th>Track</th><th>Artist</th><th>Status</th><th>Actions</th></tr></thead><tbody id="admin-tracks"></tbody></table></div>
+    </section>
+
+    <section class="admin-view" data-view="artists" hidden>
+      <div class="admin-section-label"><div><span>03 / CREATIVE ROSTER</span><h2>Artist management</h2><p>Add and manage the artists represented on your website.</p></div></div>
+      <div class="panel admin-form-panel admin-compact-form"><div class="admin-panel-heading"><span class="admin-panel-icon">♙</span><div><h3>Add an artist</h3><p>Create a public artist profile</p></div></div><form id="artist-form"><div class="form-grid"><div class="field"><label>Artist name</label><input name="name" required maxlength="120" placeholder="Artist or stage name"></div><div class="field"><label>Image URL <span class="optional">OPTIONAL</span></label><input name="image_url" type="url" placeholder="https://…"></div><div class="field full"><label>Biography</label><textarea name="bio" maxlength="2000" placeholder="Tell visitors about this artist…"></textarea></div><div class="field full admin-checkbox-field"><label><input name="is_published" type="checkbox" checked style="width:auto"> Publish artist profile</label></div></div><button class="btn gold admin-submit" type="submit">Add artist →</button><div id="artist-status" class="status" role="status"></div></form></div>
+      <div class="admin-table-heading"><div><span>ARTIST DIRECTORY</span><h3>Artists on your platform</h3></div><input class="admin-table-search" type="search" data-table-search="admin-artists" placeholder="Search artists…" aria-label="Search artists"></div>
+      <div class="table-wrap admin-table-wrap"><table class="data-table"><thead><tr><th>Artist</th><th>Status</th><th>Actions</th></tr></thead><tbody id="admin-artists"></tbody></table></div>
+    </section>
+
+    <section class="admin-view" data-view="releases" hidden>
+      <div class="admin-section-label"><div><span>04 / DISCOGRAPHY</span><h2>Release management</h2><p>Showcase albums, EPs and singles on your public website.</p></div></div>
+      <div class="panel admin-form-panel admin-compact-form"><div class="admin-panel-heading"><span class="admin-panel-icon">▣</span><div><h3>Add a release</h3><p>Publish a new music project</p></div></div><form id="release-form"><div class="form-grid"><div class="field"><label>Release title</label><input name="title" required maxlength="160" placeholder="Project or single title"></div><div class="field"><label>Release date</label><input name="release_date" type="date"></div><div class="field full"><label>Cover image URL <span class="optional">OPTIONAL</span></label><input name="cover_url" type="url" placeholder="https://…"></div>
+              <div class="field full"><label>Spotify release URL <span class="optional">OPTIONAL</span></label><input name="spotify_url" type="url" placeholder="https://open.spotify.com/album/…"><small class="admin-field-help">Paste the Spotify track, album or playlist URL. It will open in the website and Android app player.</small></div><div class="field full admin-checkbox-field"><label><input name="is_published" type="checkbox" checked style="width:auto"> Publish release</label></div></div><button class="btn gold admin-submit" type="submit">Add release →</button><div id="release-status" class="status" role="status"></div></form></div>
+      <div class="admin-table-heading"><div><span>RELEASE ARCHIVE</span><h3>Your releases</h3></div><input class="admin-table-search" type="search" data-table-search="admin-releases" placeholder="Search releases…" aria-label="Search releases"></div>
+      <div class="table-wrap admin-table-wrap"><table class="data-table"><thead><tr><th>Release</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead><tbody id="admin-releases"></tbody></table></div>
+    </section>
+
+    <section class="admin-view" data-view="inbox" hidden>
+      <div class="admin-section-label"><div><span>05 / COMMUNICATIONS</span><h2>Enquiry inbox</h2><p>Booking requests and messages submitted through your website.</p></div></div>
+      <div class="admin-inbox-toolbar"><span>PRIVATE FOUNDER INBOX</span><button class="btn" type="button" id="refresh-admin-inbox" onclick="document.getElementById('refresh-admin')?.click()">↻ Refresh inbox</button></div>
+      <div id="admin-inbox"><div class="empty">Loading enquiries…</div></div>
+    </section>
+
+    <section class="admin-view" data-view="ads" hidden>
+      <div class="hte-ai-hero">
+        <div class="hte-ai-orb">✦</div>
+        <div><div class="eyebrow">HIGH-TECH ENTERTAINMENT / AI PRODUCTION</div><h2>Make your brand <span>sound unforgettable.</span></h2><p>Create studio-quality voice advertisements with ElevenLabs, save scripts on this device, review generated MP3s and publish only when you're ready.</p></div>
+        <div class="hte-ai-badge"><span></span> AI STUDIO</div>
+      </div>
+      <div class="hte-ai-status-strip"><span>●</span><strong>Founder-only workspace</strong><span>·</span><span>ElevenLabs text-to-speech</span><span>·</span><span>MP3 drafts stored in Supabase</span></div>
+      <div class="admin-section-label"><div><span>01 / CREATE</span><h2>Voice advertisement creator</h2><p>Write or restore your script, select a presenter voice and generate an unpublished draft.</p></div></div>
+      <div class="admin-content-grid hte-ai-layout">
+        <div class="panel admin-form-panel hte-ai-form-panel">
+          <div class="admin-panel-heading"><span class="admin-panel-icon">🎙</span><div><h3>Build your advert</h3><p>Your script is saved locally when you type, and can also be saved manually.</p></div></div>
+          <form id="ai-ad-form">
+            <div class="form-grid">
+              <div class="field full"><label for="ai-ad-title">Advertisement title</label><input id="ai-ad-title" name="title" required maxlength="120" placeholder="e.g. High-Tech Entertainment station promo"></div>
+              <div class="field full"><label for="ai-ad-script">Advertisement script <span class="hte-ai-char-count" id="ai-ad-char-count">0 / 2,500</span></label><textarea id="ai-ad-script" name="script" required maxlength="2500" rows="8" placeholder="Write the exact words you want your AI presenter to speak…"></textarea><small class="admin-field-help">Tip: short sentences and punctuation help create a natural radio delivery.</small>
+                <div class="hte-ai-script-actions"><button class="btn" type="button" id="ai-ad-save-script">Save script</button><button class="btn" type="button" id="ai-ad-restore-script">Restore saved</button><button class="btn" type="button" id="ai-ad-use-sample">Insert sample</button><button class="btn" type="button" id="ai-ad-clear-script">Clear</button><span id="ai-ad-save-state" aria-live="polite">Auto-save is on</span></div>
+              </div>
+              <div class="field full"><label for="ai-ad-voice">AI presenter voice</label><div class="hte-ai-voice-row"><select id="ai-ad-voice" name="voice_id" required><option value="">Sign in to load voices…</option></select><button class="btn" type="button" id="ai-ad-reload-voices">↻ Reload voices</button></div><small class="admin-field-help" id="ai-ad-voice-help">Your available ElevenLabs voices will appear here.</small></div>
+              <div class="field full"><label for="ai-ad-model">Voice model</label><select id="ai-ad-model" name="model_id"><option value="eleven_multilingual_v2">Multilingual v2 — expressive, multilingual</option><option value="eleven_turbo_v2_5">Turbo v2.5 — faster generation</option></select></div>
+            </div>
+            <button class="btn gold admin-submit hte-ai-generate" type="submit" id="ai-ad-generate">✦ Generate AI voice draft</button>
+            <div class="status" id="ai-ad-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="admin-side-info hte-ai-guide">
+          <div class="admin-info-card"><span class="admin-info-icon">01 / SCRIPT</span><h3>Write once, keep it safe</h3><p>Your script auto-saves in this browser. Use Save script before leaving, or restore it when you return on this device.</p></div>
+          <div class="admin-info-card"><span class="admin-info-icon">02 / GENERATE</span><h3>Create an MP3 draft</h3><p>ElevenLabs generates the presenter voice. The finished audio is uploaded to your Supabase storage bucket.</p></div>
+          <div class="admin-info-card"><span class="admin-info-icon">03 / REVIEW</span><h3>Listen before publishing</h3><p>Every new advert starts unpublished. Preview the audio, then publish it when you're satisfied.</p></div>
+          <div class="admin-info-card hte-ai-notice"><span class="admin-info-icon">IMPORTANT</span><h3>Commercial usage</h3><p>Check your ElevenLabs subscription licence before using generated voices in public business advertising. Free-plan output may be restricted to non-commercial use.</p></div>
+        </div>
+      </div>
+      <div class="admin-table-heading hte-ai-campaign-heading"><div><span>02 / CAMPAIGN LIBRARY</span><h3>Your generated advertisements</h3><p class="admin-field-help">Manage drafts and published audio campaigns.</p></div><button class="btn" id="ai-ad-refresh" type="button">↻ Refresh campaigns</button></div>
+      <div id="ai-ad-list" class="hte-ai-campaign-list"><div class="empty">Your campaigns will appear here after loading.</div></div>
+    </section>
+    <section class="admin-view" data-view="settings" hidden>
+      <div class="admin-section-label"><div><span>06 / SYSTEM</span><h2>Studio settings</h2><p>Information about your account, access and platform setup.</p></div></div>
+      <div class="admin-settings-grid">
+        <article class="panel admin-setting-card"><span class="admin-setting-icon">◉</span><h3>Founder account</h3><p>Your workspace is tied to the authorised founder identity.</p><a class="btn" href="../account/">Manage account ↗</a></article>
+        <article class="panel admin-setting-card"><span class="admin-setting-icon">▤</span><h3>Database protection</h3><p>Supabase Row Level Security policies protect private management operations.</p><span class="admin-setting-state">● ACCESS RESTRICTED</span></article>
+        <article class="panel admin-setting-card"><span class="admin-setting-icon">↗</span><h3>Public website</h3><p>Visit the public-facing High Tech Entertainment experience.</p><a class="btn" href="../">Open website ↗</a></article>
+      </div>
+      <div class="panel admin-danger-zone"><div><h3>Session controls</h3><p class="muted">Sign out when you finish managing your catalogue, especially on a shared device.</p></div><button class="btn danger" data-logout>Sign out of founder studio</button></div>
+    </section>
+
+    <footer class="admin-footer"><span>HIGH TECH ENTERTAINMENT <b>·</b> FOUNDER STUDIO</span><span>Music. Beats. Production. Beyond.</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase-config.js"></script>
+<script src="../assets/app.js?v=20261101-2"></script>
+<script src="../assets/admin-upload.js?v=20261101-2"></script>
+<script src="../assets/admin-video.js?v=20261101-2"></script>
+<script src="../assets/admin-ui.js?v=20261101-2"></script>\n<script src="../assets/admin-enhancements.js?v=1"></script>
+<script src="../assets/ai-ad-studio.js?v=20261102-voice1"></script>
+</body>
+</html>
